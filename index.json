@@ -736,6 +736,39 @@
       }
     },
     {
+      "id": "naota.resend",
+      "kind": "connector",
+      "name": {
+        "vi": "Resend"
+      },
+      "description": {
+        "vi": "Gửi và quản lý email qua MCP chính chủ của Resend: email giao dịch, broadcast, mẫu email, danh bạ và phân khúc, tên miền gửi, thống kê và nhật ký. Chạy trên máy chủ của Resend, chỉ cần dán API key. Mặc định Chỉ đọc."
+      },
+      "version": "1.0.0",
+      "author": {
+        "name": "Naota"
+      },
+      "category": "marketing",
+      "category_label": {
+        "vi": "Marketing"
+      },
+      "tier": "data",
+      "verified": true,
+      "updated": "2026-11-03",
+      "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.resend",
+      "icon": "packs/naota.resend/assets/resend.png",
+      "provides": {
+        "connectors": [
+          "resend"
+        ]
+      },
+      "download": {
+        "url": "dist/naota-resend-1.0.0.zip",
+        "sha256": "3480990ef241e211f450696052eccf191844883d2815a6035183c5dc65eda8e4",
+        "size": 14423
+      }
+    },
+    {
       "id": "naota.slack",
       "kind": "connector",
       "name": {
@@ -2291,7 +2324,7 @@
       "description": {
         "vi": "Làm việc với code trên GitHub qua MCP chính chủ: đọc và sửa file, tạo nhánh, đẩy commit, mở và trộn Pull Request, issue, review, xem và chạy GitHub Actions, đọc log CI, cảnh báo bảo mật. Bật đủ mọi bộ công cụ, dán Personal Access Token là xong."
       },
-      "version": "1.0.2",
+      "version": "1.0.3",
       "author": {
         "name": "Naota"
       },
@@ -2301,7 +2334,7 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-10-13",
+      "updated": "2026-11-04",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.github",
       "icon": "packs/naota.github/assets/github.png",
       "provides": {
@@ -2310,9 +2343,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-github-1.0.2.zip",
-        "sha256": "b616f9f4640a9cc47cf1ec02487c13c8de0934b8204104c43820c44ebb95b703",
-        "size": 9506
+        "url": "dist/naota-github-1.0.3.zip",
+        "sha256": "7ba9fcc64917988858fb7b10afd81cc27912bd9335c90a1ed2622b6168e14ced",
+        "size": 9527
       }
     },
     {
@@ -2357,6 +2390,39 @@
       "description": {
         "vi": "Toàn bộ API Cloudflare ngay trong chat qua MCP chính chủ: DNS, Workers, Pages, KV, R2, D1, tường lửa, SSL, cache, thống kê lưu lượng, Zero Trust. Dán API token là xong, quyền của token quyết định Naota được làm gì."
       },
+      "version": "1.0.1",
+      "author": {
+        "name": "Naota"
+      },
+      "category": "lap-trinh",
+      "category_label": {
+        "vi": "Lập trình"
+      },
+      "tier": "data",
+      "verified": true,
+      "updated": "2026-11-05",
+      "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.cloudflare",
+      "icon": "packs/naota.cloudflare/assets/cloudflare.jpg",
+      "provides": {
+        "connectors": [
+          "cloudflare"
+        ]
+      },
+      "download": {
+        "url": "dist/naota-cloudflare-1.0.1.zip",
+        "sha256": "f55fd5208746d8f7a4e9b47719f2e3e7f1f3dd7deb1cb4d781832cd5fc5b023b",
+        "size": 5296
+      }
+    },
+    {
+      "id": "naota.cloudflare-oauth",
+      "kind": "connector",
+      "name": {
+        "vi": "Cloudflare (đăng nhập web)"
+      },
+      "description": {
+        "vi": "Cùng MCP chính chủ của Cloudflare nhưng không cần tạo API token: bấm Kết nối, đăng nhập Cloudflare rồi tick quyền muốn cấp ngay trên trang của Cloudflare."
+      },
       "version": "1.0.0",
       "author": {
         "name": "Naota"
@@ -2367,18 +2433,18 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-10-02",
-      "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.cloudflare",
-      "icon": "packs/naota.cloudflare/assets/cloudflare.jpg",
+      "updated": "2026-11-05",
+      "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.cloudflare-oauth",
+      "icon": "packs/naota.cloudflare-oauth/assets/cloudflare.jpg",
       "provides": {
         "connectors": [
-          "cloudflare"
+          "cloudflare-oauth"
         ]
       },
       "download": {
-        "url": "dist/naota-cloudflare-1.0.0.zip",
-        "sha256": "84b398944c8b00e7aa76d67c9a0182badf69d803e6bdc59370e0d2a5c1d065ba",
-        "size": 5247
+        "url": "dist/naota-cloudflare-oauth-1.0.0.zip",
+        "sha256": "e14059167564cb688a09716799f9f9a4ad7f9a135b9ef80b04e5a7d112262878",
+        "size": 4726
       }
     },
     {
@@ -2388,9 +2454,9 @@
         "vi": "Cloudflare Deploy (Wrangler)"
       },
       "description": {
-        "vi": "Deploy Worker và trang web tĩnh lên Cloudflare bằng Wrangler ngay trong chat, bộ não nào cũng dùng được. Dùng lại API token của gói Cloudflare, không phải dán lần hai. Deploy thật chỉ chạy khi kết nối Cloudflare ở mức Toàn quyền. Cần Node.js 20+ trên máy chạy Naota."
+        "vi": "Deploy Worker và trang web tĩnh lên Cloudflare bằng Wrangler ngay trong chat, bộ não nào cũng dùng được. Dùng lại API token của kết nối Cloudflare (cách Dán API token), không phải dán lần hai. Deploy thật chỉ chạy khi kết nối Cloudflare ở mức Toàn quyền. Cần Node.js 20+ trên máy chạy Naota."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Naota"
       },
@@ -2400,7 +2466,7 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-10-02",
+      "updated": "2026-11-05",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.cloudflare-deploy",
       "icon": "packs/naota.cloudflare-deploy/assets/cloudflare-deploy.jpg",
       "provides": {
@@ -2412,9 +2478,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-cloudflare-deploy-1.0.0.zip",
-        "sha256": "b0c8265572b48a27c2c1d7ece3e86fce0b442288ad58421568a959e9b8482ac5",
-        "size": 13307
+        "url": "dist/naota-cloudflare-deploy-1.0.1.zip",
+        "sha256": "af40db43989b7e233ada75b0869ce7f43b24638d79c464ac0bd758c8f809c9c4",
+        "size": 13385
       }
     },
     {
@@ -2428,7 +2494,7 @@
         "vi": "Đi kèm kết nối Zalo: gửi ảnh và file, tag đúng người trong nhóm, tạo ghi chú, đọc và sửa ghi chú ghim (giữ nguyên ghim), nhắc hẹn, poll, đọc ảnh người ta gửi trong nhóm (ChatGPT trên gói của bạn tả lại nội dung ảnh cho mọi bộ não), và kết bạn: tìm người theo số điện thoại hay tên bạn bè, xem lời mời chờ duyệt và đã gửi, gửi, nhận, từ chối, rút lại lời mời, và đổi tên khách bằng tên gợi nhớ. Cần Naota 1.0.0 trở lên và đã quét QR Zalo ở trang Kết nối.",
         "en": "Goes with the Zalo connection: send images and files, tag the right people in a group, create notes, read and edit pinned notes (the pin stays), reminders and polls, read the images people post in a group (ChatGPT on your plan describes them for every brain), and handle friends: find people by phone or by a friend's name, see pending and sent requests, send, accept, reject and withdraw requests, and rename a contact with a nickname. Needs Naota 1.0.0 or newer and Zalo scanned on the Connections page."
       },
-      "version": "1.5.0",
+      "version": "2.0.1",
       "author": {
         "name": "Naota"
       },
@@ -2439,21 +2505,18 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-10-27",
+      "updated": "2026-11-09",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.zalo",
       "icon": "packs/naota.zalo/assets/zalo.png",
       "provides": {
         "plugins": [
-          "zalo-image",
-          "zalo-group",
-          "zalo-read-images",
-          "zalo-friend"
+          "zalo-extras"
         ]
       },
       "download": {
-        "url": "dist/naota-zalo-1.5.0.zip",
-        "sha256": "5914415602d9ed4150ed2e726b5d064057dfb18218a19ae46f05922eaed72ae7",
-        "size": 42135
+        "url": "dist/naota-zalo-2.0.1.zip",
+        "sha256": "a7b854a7c4be4403c6e6cd76652437ec0c65f68025bd1ae7b01baa0227f0d5d1",
+        "size": 42969
       }
     },
     {
@@ -15300,6 +15363,73 @@
         "url": "dist/naota-agency-zk-steward-1.0.0.zip",
         "sha256": "44fa1b506e3fc361d3097c2799d9eefee17dc54d15a3aa5674721b69811f0133",
         "size": 7158
+      }
+    },
+    {
+      "id": "naota.claude-seo",
+      "kind": "skill",
+      "name": {
+        "vi": "Claude SEO: Kiểm tra và tối ưu SEO",
+        "en": "Claude SEO: Audit and optimise SEO"
+      },
+      "description": {
+        "vi": "24 skill SEO của Claude SEO: kiểm tra cả website, phân tích từng trang, SEO kỹ thuật và Core Web Vitals, schema, sitemap, nội dung E-E-A-T, SEO địa phương, thương mại điện tử, backlink, SEO cho AI (GEO). Cần Python 3.11 trở lên.",
+        "en": "24 Claude SEO skills: full site audits, single-page analysis, technical SEO and Core Web Vitals, schema, sitemaps, E-E-A-T content, local SEO, ecommerce, backlinks and AI search (GEO). Needs Python 3.11 or newer."
+      },
+      "version": "1.0.2",
+      "author": {
+        "name": "AgriciDaniel",
+        "url": "https://github.com/AgriciDaniel/claude-seo"
+      },
+      "category": "marketing",
+      "category_label": {
+        "vi": "Marketing",
+        "en": "Marketing"
+      },
+      "tier": "code",
+      "verified": true,
+      "updated": "2026-11-06",
+      "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.claude-seo",
+      "source": "https://github.com/AgriciDaniel/claude-seo",
+      "license": "MIT",
+      "upstream": {
+        "repo": "AgriciDaniel/claude-seo",
+        "ref": "main",
+        "commit": "6be93f45064ffbadced572b5d5c95f55fd263af0",
+        "synced": "2026-11-06"
+      },
+      "provides": {
+        "skills": [
+          "seo",
+          "seo-agentic",
+          "seo-audit",
+          "seo-backlinks",
+          "seo-cluster",
+          "seo-competitor-pages",
+          "seo-content",
+          "seo-content-brief",
+          "seo-drift",
+          "seo-ecommerce",
+          "seo-flow",
+          "seo-geo",
+          "seo-google",
+          "seo-hreflang",
+          "seo-images",
+          "seo-local",
+          "seo-maps",
+          "seo-page",
+          "seo-plan",
+          "seo-programmatic",
+          "seo-schema",
+          "seo-sitemap",
+          "seo-sxo",
+          "seo-technical"
+        ]
+      },
+      "download": {
+        "url": "dist/naota-claude-seo-1.0.2.zip",
+        "sha256": "e80227103167cc60a6c00f26db5691bb68bdea30a0b688a8c7ebb0385aa397bb",
+        "size": 676396
       }
     }
   ]

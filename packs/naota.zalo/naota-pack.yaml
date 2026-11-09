@@ -1,17 +1,22 @@
-# Gói "Zalo mở rộng": các tool đi kèm kết nối Zalo Agent MCP (zalo-agent-cli) của NAOTA.
+# Gói "Zalo mở rộng": các tool đi kèm kết nối Zalo của NAOTA.
 #
 # Kết nối Zalo và phần quét QR nằm trong LÕI Naota (đăng nhập QR không khai bằng gói được), nên
-# gói này không chứa connector. Nó chỉ chứa ba plugin bù chỗ MCP chuẩn còn thiếu: gửi ảnh/file,
-# tag người + ghi chú + nhắc hẹn + poll trong nhóm, và ĐỌC ẢNH người ta gửi trong nhóm. Cả ba gọi
-# lại chính CLI zalo-agent-cli bằng phiên đã quét QR (`server/zalo_cli.py` của lõi), không đăng
-# nhập lần hai, không gọi đi đâu ngoài Zalo (và ChatGPT của chính người dùng khi tả ảnh).
+# gói này không chứa connector. Nó chỉ chứa MỘT plugin, `zalo-extras`, bù chỗ MCP chuẩn còn thiếu:
+# gửi ảnh/file, tag người + ghi chú + nhắc hẹn + poll trong nhóm, ĐỌC ẢNH người ta gửi, và kết bạn.
+# Mọi phần gọi lại chính CLI naota-zalo bằng phiên đã quét QR (`server/zalo_cli.py` của lõi), không
+# đăng nhập lần hai, không gọi đi đâu ngoài Zalo (và ChatGPT của chính người dùng khi tả ảnh).
 #
 # Ai đấu Zalo thì Naota mời cài gói này ngay sau khi quét QR.
+#
+# 2.0.0: bốn plugin cũ (zalo-image, zalo-group, zalo-read-images, zalo-friend) gộp thành một, vì mỗi
+# tính năng Zalo mới lại đẻ thêm một plugin. Tính năng Zalo mới từ nay là một module trong
+# `plugins/zalo-extras/`, không phải một thư mục plugin mới. Cập nhật gói thay nguyên thư mục gói, nên
+# bốn plugin cũ tự biến mất; tên tool và mức quyền của từng tool giữ nguyên.
 format: naota-pack
 spec: 1
 
 id: naota.zalo
-version: 1.5.0
+version: 2.0.1
 
 name:
   vi: Zalo mở rộng
@@ -25,13 +30,10 @@ author:
 license: MIT
 homepage: https://github.com/vuongtex/naota-store/tree/main/packs/naota.zalo
 
-# Plugin đọc ảnh dùng `image_vision` của lõi.
+# Phần đọc ảnh dùng `image_vision` của lõi.
 compat:
   app: ">=1.0.0"
 
 provides:
   plugins:
-    - plugins/zalo-image
-    - plugins/zalo-group
-    - plugins/zalo-read-images
-    - plugins/zalo-friend
+    - plugins/zalo-extras
