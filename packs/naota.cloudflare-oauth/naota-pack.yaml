@@ -1,0 +1,12 @@
+format: naota-pack
+spec: 1
+id: naota.cloudflare-oauth
+version: 1.0.0
+name: {vi: "Cloudflare (đăng nhập web)"}
+description: {vi: "Cùng MCP chính chủ của Cloudflare nhưng không cần tạo API token: bấm Kết nối, đăng nhập Cloudflare rồi tick quyền muốn cấp ngay trên trang của Cloudflare."}
+author: {name: Naota}
+license: MIT
+homepage: "https://github.com/vuongtex/naota-store"
+compat: {app: ">=1.0.0"}
+provides:
+  connectors: [connectors/cloudflare-oauth.json]

@@ -1,4 +1,4 @@
-"""Plugin zalo-image: gửi ảnh/file qua Zalo bằng phiên đã quét QR.
+"""Phần gửi ảnh (send_media.py) của plugin zalo-extras: gửi ảnh/file qua Zalo bằng phiên đã quét QR.
 
     NAOTA_OS_DIR=../naota python tests/naota.zalo/test_zalo_image.py
 
@@ -31,7 +31,7 @@ def check(name, cond):
 
 
 spec = importlib.util.spec_from_file_location(
-    "zalo_image_plugin", PACK / "plugins" / "zalo-image" / "plugin.py")
+    "zalo_image_plugin", PACK / "plugins" / "zalo-extras" / "send_media.py")
 P = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(P)
 
@@ -58,8 +58,8 @@ def gia_lap(conns, rc=0, out='{"ok":true}', err=""):
     P._ket_noi_zalo = lambda: list(conns)
     P.shutil.which = lambda name: "/usr/bin/npx" if name == "npx" else None
 
-    async def _chay(argv, home):
-        _da_chay.append({"argv": argv, "home": home})
+    async def _chay(argv, home, timeout=None):
+        _da_chay.append({"argv": argv, "home": home, "timeout": timeout})
         return rc, out, err
     P._chay = _chay
 
@@ -89,8 +89,8 @@ r = goi({"thread_id": "t1", "paths": ["attachments/khong-co.jpg"]})
 check("file không tồn tại thì báo NGAY, không đẩy sang CLI",
       r.startswith("ERROR") and "không thấy file" in r and not _da_chay)
 
-r = goi({"thread_id": "t1", "paths": ["attachments/anh.jpg"] * 11})
-check("chặn gửi quá nhiều file một lượt", r.startswith("ERROR") and not _da_chay)
+r = goi({"thread_id": "t1", "paths": ["attachments/anh.jpg"] * 51})
+check("chặn gửi quá 50 ảnh một lượt (trần của chính Zalo)", r.startswith("ERROR") and "50" in r and not _da_chay)
 
 # ============================================================
 # 2. Tham số thiếu
@@ -120,6 +120,16 @@ check("truyền loại hội thoại (nhóm = 1)", argv[argv.index("-t") + 1] ==
 check("truyền lời nhắn kèm", argv[argv.index("-m") + 1] == "ảnh sản phẩm")
 check("CANARY: chạy trong HOME của đúng kết nối Zalo (nếu không CLI đòi quét QR lại)",
       _da_chay[0]["home"] == MOT[0]["home"])
+check("2 ảnh chờ đúng trần chung", _da_chay[0]["timeout"] == P.zalo_cli.DEFAULT_TIMEOUT)
+
+# 07/11/2026: Zalo cho gửi 50 ảnh một lần, trần 10 cũ bắt chia album thành năm lượt (người dùng sửa tay thì cập nhật là mất).
+_da_chay.clear()
+r = goi({"thread_id": "t1", "paths": ["attachments/anh.jpg"] * 50})
+check("50 ảnh một lượt gửi được, một lệnh duy nhất",
+      json.loads(r)["sent"] == 50 and len(_da_chay) == 1
+      and sum(1 for a in _da_chay[0]["argv"] if a.endswith("anh.jpg")) == 50)
+check("50 ảnh được chờ lâu hơn (mỗi ảnh tải lên riêng)",
+      _da_chay[0]["timeout"] == P.zalo_cli.DEFAULT_TIMEOUT + 40 * P._GIAY_MOI_ANH)
 
 # ============================================================
 # 3b. FILE đi qua MCP (zalo_cli.send_files), KHÔNG qua CLI send-file
@@ -149,6 +159,9 @@ check("file Excel đi qua send_files của lõi, đúng tài khoản, HOME, cu�
 check("thành công trả JSON kind=file", json.loads(r)["kind"] == "file" and json.loads(r)["files"] == ["danh-sach.xlsx"])
 
 _gui.clear()
+r = goi({"thread_id": "t1", "paths": ["bao-cao.pdf"] * 11})
+check("FILE vẫn tối đa 10 một lượt (mỗi lượt file chờ Zalo xác nhận có hạn)",
+      r.startswith("ERROR") and "10 file" in r and not _gui and not _da_chay)
 r = goi({"thread_id": "t1", "paths": ["bao-cao.pdf"]})
 check("PDF cũng đi đường MCP", len(_gui) == 1 and not _da_chay and json.loads(r)["kind"] == "file")
 _gui.clear()
@@ -218,9 +231,9 @@ check("CLI lỗi thì trả ERROR kèm nguyên nhân", r.startswith("ERROR") and
 # ============================================================
 import fastyaml  # noqa: E402
 
-y = fastyaml.safe_load((PACK / "plugins" / "zalo-image" / "plugin.yaml").read_text(encoding="utf-8"))
+y = fastyaml.safe_load((PACK / "plugins" / "zalo-extras" / "plugin.yaml").read_text(encoding="utf-8"))
 check("plugin khai min_mode full", y.get("min_mode") == "full")
-check("plugin khai đúng tool", y.get("tools") == ["zalo_send_image"])
+check("plugin khai tool gửi ảnh", "zalo_send_image" in (y.get("tools") or []))
 
 
 class ThuCtx:
