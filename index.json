@@ -1,7 +1,7 @@
 {
   "format": "naota-pack-index",
   "format_version": 1,
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "store": {
     "name": "Kho cài đặt Naota",
     "url": "https://github.com/vuongtex/naota-store"
@@ -3396,7 +3396,7 @@
         "vi": "Skill sửa văn bản cho bớt mùi AI: nhận ra và gỡ các dấu hiệu quen thuộc (từ sáo rỗng, câu ba vế, kết luận chung chung) để bài viết đọc như người thật viết. Dùng tốt nhất với nội dung tiếng Anh.",
         "en": "Edits text so it stops sounding like AI: spots and removes the familiar tells (stock words, rule of three, vague wrap-ups) so the piece reads as written by a person. Works best on English."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Siqi Chen",
         "url": "https://github.com/blader/humanizer"
@@ -3408,15 +3408,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-10-28",
+      "updated": "2026-11-10",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.humanizer",
       "source": "https://github.com/blader/humanizer",
       "license": "MIT",
       "upstream": {
         "repo": "blader/humanizer",
         "ref": "main",
-        "commit": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
-        "synced": "2026-10-28"
+        "commit": "b48c832f0f809c1b5658edbb838c2521b72f2413",
+        "synced": "2026-11-10"
       },
       "provides": {
         "skills": [
@@ -3424,9 +3424,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-humanizer-1.0.0.zip",
-        "sha256": "3b74aa977c170b748c161e5f525dbc04d915e61019fdc0ae79a7be474e5394ba",
-        "size": 28074
+        "url": "dist/naota-humanizer-1.0.1.zip",
+        "sha256": "dad8ca2cba81895304a73b0e73698f337dccb19397f4e6548c7fb4eb79242492",
+        "size": 29282
       }
     },
     {
@@ -3655,7 +3655,7 @@
         "vi": "Skill của REA (Reverse Engineer Anything), repo AI đang nổi nhất GitHub: phân tích app Electron/JavaScript, tệp chạy, firmware và trang web khi không có mã nguồn, so sánh phiên bản, dịch ngược. Cần cài công cụ rea (npm rea-agents).",
         "en": "The REA (Reverse Engineer Anything) skill, GitHub's top trending AI repo: analyse Electron/JavaScript apps, binaries, firmware and web apps without their source, compare versions, decompile. Needs the rea tool (npm rea-agents)."
       },
-      "version": "1.0.10",
+      "version": "1.0.11",
       "author": {
         "name": "morluto",
         "url": "https://github.com/morluto/rea"
@@ -3667,15 +3667,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.rea",
       "source": "https://github.com/morluto/rea",
       "license": "MIT",
       "upstream": {
         "repo": "morluto/rea",
         "ref": "main",
-        "commit": "dda2d4029548f820bf5621b3bc1dd1ce381446a2",
-        "synced": "2026-11-09"
+        "commit": "94ca4b656aede76eda0ebac3af9aed42a27c21a5",
+        "synced": "2026-11-10"
       },
       "provides": {
         "skills": [
@@ -3683,9 +3683,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-rea-1.0.10.zip",
-        "sha256": "e0996b4307827ed03ae1704042e6d01e3528ffb6b450f3ade343a516c3c1df39",
-        "size": 75912
+        "url": "dist/naota-rea-1.0.11.zip",
+        "sha256": "bc7f8315b71f675b1aa5b7124e7077495da3ecf4fa4d41b32462454e79055413",
+        "size": 92509
       }
     },
     {
