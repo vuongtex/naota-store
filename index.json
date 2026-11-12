@@ -1,7 +1,7 @@
 {
   "format": "naota-pack-index",
   "format_version": 1,
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "store": {
     "name": "Kho cài đặt Naota",
     "url": "https://github.com/vuongtex/naota-store"
@@ -3013,7 +3013,7 @@
         "vi": "Bộ skill chính chủ của Remotion (remotion.dev): tạo dự án video bằng React, hoạt hình, chữ và hiệu ứng, phụ đề, bản đồ, xem trước và xuất video. Theo repo gốc, cập nhật mỗi khi Remotion sửa skill.",
         "en": "Remotion's official skills (remotion.dev): create React video projects, animation, type and effects, captions, maps, preview and render. Follows the source repo and updates whenever Remotion changes its skills."
       },
-      "version": "1.0.4",
+      "version": "1.0.5",
       "author": {
         "name": "Remotion",
         "url": "https://github.com/remotion-dev/skills"
@@ -3025,15 +3025,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-11",
+      "updated": "2026-11-12",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.remotion",
       "source": "https://github.com/remotion-dev/skills",
       "license": "Remotion License",
       "upstream": {
         "repo": "remotion-dev/skills",
         "ref": "main",
-        "commit": "1fc074b74b95cfecf7b1e419132f2cfe23dafebe",
-        "synced": "2026-11-11"
+        "commit": "7e541aa4d7361dfaca0780a565a47307eb7bdfbb",
+        "synced": "2026-11-12"
       },
       "provides": {
         "skills": [
@@ -3053,9 +3053,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-remotion-1.0.4.zip",
-        "sha256": "b6257d9a7864d4eac33a7a111c6c668674f23e2d55191609962463cfa91d9d0a",
-        "size": 884544
+        "url": "dist/naota-remotion-1.0.5.zip",
+        "sha256": "bac6ce2badd859acf7023ef224764df7474bb6767cd082683f92c8d9e248ef0e",
+        "size": 887256
       }
     },
     {
@@ -3655,7 +3655,7 @@
         "vi": "Skill của REA (Reverse Engineer Anything), repo AI đang nổi nhất GitHub: phân tích app Electron/JavaScript, tệp chạy, firmware và trang web khi không có mã nguồn, so sánh phiên bản, dịch ngược. Cần cài công cụ rea (npm rea-agents).",
         "en": "The REA (Reverse Engineer Anything) skill, GitHub's top trending AI repo: analyse Electron/JavaScript apps, binaries, firmware and web apps without their source, compare versions, decompile. Needs the rea tool (npm rea-agents)."
       },
-      "version": "1.0.12",
+      "version": "1.0.13",
       "author": {
         "name": "morluto",
         "url": "https://github.com/morluto/rea"
@@ -3667,15 +3667,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-11",
+      "updated": "2026-11-12",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.rea",
       "source": "https://github.com/morluto/rea",
       "license": "MIT",
       "upstream": {
         "repo": "morluto/rea",
         "ref": "main",
-        "commit": "0e0af455f29d470e5e47bbee73442fe35d9276a0",
-        "synced": "2026-11-11"
+        "commit": "653c49419e65515d5567ebf13c0e6dd2ac794f7e",
+        "synced": "2026-11-12"
       },
       "provides": {
         "skills": [
@@ -3683,9 +3683,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-rea-1.0.12.zip",
-        "sha256": "b734ca356103a256d112b94041fbdbedd29f32d502a80e70fd206b738e140ab1",
-        "size": 92798
+        "url": "dist/naota-rea-1.0.13.zip",
+        "sha256": "228650c0dcad5f62c0555ac087f1b3c6c7ff473c0bb9af22aa134b03d1374367",
+        "size": 93380
       }
     },
     {
