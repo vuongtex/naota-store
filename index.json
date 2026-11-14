@@ -1,7 +1,7 @@
 {
   "format": "naota-pack-index",
   "format_version": 1,
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "store": {
     "name": "Kho cài đặt Naota",
     "url": "https://github.com/vuongtex/naota-store"
@@ -3655,7 +3655,7 @@
         "vi": "Skill của REA (Reverse Engineer Anything), repo AI đang nổi nhất GitHub: phân tích app Electron/JavaScript, tệp chạy, firmware và trang web khi không có mã nguồn, so sánh phiên bản, dịch ngược. Cần cài công cụ rea (npm rea-agents).",
         "en": "The REA (Reverse Engineer Anything) skill, GitHub's top trending AI repo: analyse Electron/JavaScript apps, binaries, firmware and web apps without their source, compare versions, decompile. Needs the rea tool (npm rea-agents)."
       },
-      "version": "1.0.13",
+      "version": "1.0.14",
       "author": {
         "name": "morluto",
         "url": "https://github.com/morluto/rea"
@@ -3667,15 +3667,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-12",
+      "updated": "2026-11-14",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.rea",
       "source": "https://github.com/morluto/rea",
       "license": "MIT",
       "upstream": {
         "repo": "morluto/rea",
         "ref": "main",
-        "commit": "653c49419e65515d5567ebf13c0e6dd2ac794f7e",
-        "synced": "2026-11-12"
+        "commit": "2343e5692595ae9c08ce7de5bb91460118e67ed2",
+        "synced": "2026-11-14"
       },
       "provides": {
         "skills": [
@@ -3683,9 +3683,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-rea-1.0.13.zip",
-        "sha256": "228650c0dcad5f62c0555ac087f1b3c6c7ff473c0bb9af22aa134b03d1374367",
-        "size": 93380
+        "url": "dist/naota-rea-1.0.14.zip",
+        "sha256": "510741f15564062950d2908b29ca67710d681041299d367d996e03a945d5ad8f",
+        "size": 93407
       }
     },
     {
