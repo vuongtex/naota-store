@@ -1,7 +1,7 @@
 {
   "format": "naota-pack-index",
   "format_version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "store": {
     "name": "Kho cài đặt Naota",
     "url": "https://github.com/vuongtex/naota-store"
@@ -3655,7 +3655,7 @@
         "vi": "Skill của REA (Reverse Engineer Anything), repo AI đang nổi nhất GitHub: phân tích app Electron/JavaScript, tệp chạy, firmware và trang web khi không có mã nguồn, so sánh phiên bản, dịch ngược. Cần cài công cụ rea (npm rea-agents).",
         "en": "The REA (Reverse Engineer Anything) skill, GitHub's top trending AI repo: analyse Electron/JavaScript apps, binaries, firmware and web apps without their source, compare versions, decompile. Needs the rea tool (npm rea-agents)."
       },
-      "version": "1.0.20",
+      "version": "1.0.21",
       "author": {
         "name": "morluto",
         "url": "https://github.com/morluto/rea"
@@ -3667,15 +3667,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-20",
+      "updated": "2026-11-21",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.rea",
       "source": "https://github.com/morluto/rea",
       "license": "MIT",
       "upstream": {
         "repo": "morluto/rea",
         "ref": "main",
-        "commit": "ad2b34ca9b30769ec8ff8ef26025a38a9a32c589",
-        "synced": "2026-11-20"
+        "commit": "5b04c74ae05d3c5acf739f2941cd8d9145761f3d",
+        "synced": "2026-11-21"
       },
       "provides": {
         "skills": [
@@ -3683,9 +3683,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-rea-1.0.20.zip",
-        "sha256": "a23dc7c819fe21e8bb4f0293eba71d671037c59d2830d745eba90ea404c19d90",
-        "size": 97703
+        "url": "dist/naota-rea-1.0.21.zip",
+        "sha256": "6f9a5bef7d82060cc4d6f0f1231fc2fb42e9959f55f18547f61343ecc47b35e3",
+        "size": 97790
       }
     },
     {
@@ -3749,7 +3749,7 @@
         "vi": "Skill chính chủ của Vercel: thực hành tốt nhất cho React và Next.js, React Native, hiệu ứng chuyển trang, nguyên tắc thiết kế giao diện web, viết nội dung rõ ràng, và triển khai lên Vercel.",
         "en": "Vercel's official skills: React and Next.js best practices, React Native, view transitions, web interface design guidelines, clear writing, and deploying to Vercel."
       },
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Vercel",
         "url": "https://github.com/vercel-labs/agent-skills"
@@ -3761,15 +3761,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-10-28",
+      "updated": "2026-11-21",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.vercel-skills",
       "source": "https://github.com/vercel-labs/agent-skills",
       "license": "MIT",
       "upstream": {
         "repo": "vercel-labs/agent-skills",
         "ref": "main",
-        "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
-        "synced": "2026-10-28"
+        "commit": "5a37a6329fbad3666c3207392a6a7c0110e92efb",
+        "synced": "2026-11-21"
       },
       "provides": {
         "skills": [
@@ -3785,9 +3785,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-vercel-skills-1.0.0.zip",
-        "sha256": "84269f602b37fde683c0f44961b873d8d01e00a4055d26e6b34b3856ff652e28",
-        "size": 554248
+        "url": "dist/naota-vercel-skills-1.0.1.zip",
+        "sha256": "76415fd41f8b3ddd2267bcd5e2ad680b0593abc529b34c403bec506dca7ac432",
+        "size": 558709
       }
     },
     {
