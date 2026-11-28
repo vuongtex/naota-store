@@ -1,7 +1,7 @@
 {
   "format": "naota-pack-index",
   "format_version": 1,
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "store": {
     "name": "Kho cài đặt Naota",
     "url": "https://github.com/vuongtex/naota-store"
@@ -3585,7 +3585,7 @@
         "vi": "Bộ skill của Matt Pocock: thiết kế codebase, chẩn đoán lỗi, TDD, viết spec và chia ticket, review code, nguyên mẫu nhanh, cùng các skill làm việc như hỏi vặn ý tưởng (grill-me), bàn giao, viết cho AI agent.",
         "en": "Matt Pocock's skills: codebase design, diagnosing bugs, TDD, writing specs and splitting tickets, code review, quick prototypes, plus working skills such as grill-me, handoffs and writing for agents."
       },
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "Matt Pocock",
         "url": "https://github.com/mattpocock/skills"
@@ -3597,15 +3597,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-25",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.mattpocock",
       "source": "https://github.com/mattpocock/skills",
       "license": "MIT",
       "upstream": {
         "repo": "mattpocock/skills",
         "ref": "main",
-        "commit": "6f7f7831a625f040a8e06a0e7954826b87ce775a",
-        "synced": "2026-11-25"
+        "commit": "bbadaa631c37af594e5a05c9cefacd9956136b18",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3639,8 +3639,8 @@
         ]
       },
       "download": {
-        "url": "dist/naota-mattpocock-1.0.3.zip",
-        "sha256": "7cf1ae0377a3558040053763aeb74f76f4fb18c7ad23861c47ca158489ab9b6b",
+        "url": "dist/naota-mattpocock-1.0.4.zip",
+        "sha256": "0720bd5a854fc0dc87b8ccb14da884cc5045de0a47d5c766b170b34317e117a5",
         "size": 113574
       }
     },
@@ -3655,7 +3655,7 @@
         "vi": "Skill của REA (Reverse Engineer Anything), repo AI đang nổi nhất GitHub: phân tích app Electron/JavaScript, tệp chạy, firmware và trang web khi không có mã nguồn, so sánh phiên bản, dịch ngược. Cần cài công cụ rea (npm rea-agents).",
         "en": "The REA (Reverse Engineer Anything) skill, GitHub's top trending AI repo: analyse Electron/JavaScript apps, binaries, firmware and web apps without their source, compare versions, decompile. Needs the rea tool (npm rea-agents)."
       },
-      "version": "1.0.25",
+      "version": "1.0.26",
       "author": {
         "name": "morluto",
         "url": "https://github.com/morluto/rea"
@@ -3667,15 +3667,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-27",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/vuongtex/naota-store/tree/main/packs/naota.rea",
       "source": "https://github.com/morluto/rea",
       "license": "MIT",
       "upstream": {
         "repo": "morluto/rea",
         "ref": "main",
-        "commit": "dc12e5768b57ae8b78dec5c3eb453929b255cf7f",
-        "synced": "2026-11-27"
+        "commit": "0c7ebd68c4818a55cdd013ac73ccd9b41e141e07",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3683,9 +3683,9 @@
         ]
       },
       "download": {
-        "url": "dist/naota-rea-1.0.25.zip",
-        "sha256": "b54cf8ad7534f21ad59859cf136c5e1492028715f0ce4bdfd07d05fc00392dd4",
-        "size": 96757
+        "url": "dist/naota-rea-1.0.26.zip",
+        "sha256": "ec50d3e2641e94a1d9780132a4ad127a22fc05e039436a3388f614fdef9bd877",
+        "size": 99253
       }
     },
     {
